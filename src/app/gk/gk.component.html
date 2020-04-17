@@ -1,0 +1,33 @@
+<nav>
+  <div class="nav-wrapper">
+    <a  class="brand-logo center">Quiz Start</a>
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <li>Celebrities</li>
+    </ul>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li routerLink="../">Back</li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+  <div class="container-fluid">
+    <div class="row">
+      <h3>Quesions</h3>
+      <div class="col-md-12" *ngFor="let r of que">
+        <h5>{{r.question}}</h5>
+        <button class="btn btn-danger" (click)="w()"  >{{r.correct_answer  }}</button>
+        <button class="btn btn-danger" style="margin-left: 15px" *ngFor="let temp of r.incorrect_answers">{{temp}}</button>
+        <hr>
+
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <button class="btn btn-danger" (click)="w1()">Finish</button>
+      <h4>{{"Your Correct Answer = " +  count2 + "And Your Incorrect Answer =  " + min}}</h4>
+    </div>
+  </div>
+</div>
+
+

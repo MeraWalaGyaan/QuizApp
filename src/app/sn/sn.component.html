@@ -1,0 +1,23 @@
+<nav>
+  <div class="nav-wrapper">
+    <a  class="brand-logo center">Quiz Start</a>
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <li>Celebrities</li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="row">
+    <h3>Quesions</h3>
+    <div class="col-md-12" *ngFor="let c of sn">
+      <h6>{{c.question}}</h6>
+      <button class="btn btn-danger">{{c.correct_answer  }}</button>
+      <h5 *ngFor="let temp of c.incorrect_answers"><button class="btn btn-danger" >{{temp}}</button></h5>
+      <hr>
+
+
+    </div>
+  </div>
+</div>

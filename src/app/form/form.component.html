@@ -1,0 +1,38 @@
+<div [ngStyle]="{'background' : 'url(https://i.pinimg.com/originals/61/23/09/61230963af08800bd94f901f22604010.jpg'}" style="height:1000px">
+<div class="row">
+  <div class="col s6 offset-s3">
+    <div class="card">
+      <div class="col s6">
+        <h2>Quiz Registration</h2>
+      </div>
+      <div class="col s6">
+        <img src="../../assets/f.jpg" style="width:250px; height:250px;" class="offset-s3">
+      </div>
+      <div class="card-content">
+        <form #registerForm="ngForm">
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons  prefix ">account_circle</i>
+              <input type="text" id="Name" name="Name" #Name ngModel required>
+              <label >Name</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons  prefix ">email</i>
+              <input type="email" name="email" #email ngModel required [pattern]="emailPattern">
+              <label >email</label>
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <button class="btn-large btn-submit" [disabled]="!registerForm.valid" routerLink="Home">Start</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
